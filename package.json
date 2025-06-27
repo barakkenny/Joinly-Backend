@@ -1,0 +1,26 @@
+{
+  "name": "expresss-with-typescript",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc -w",
+    "prestart": "npm run build",
+    "start": "npx nodemon dist/index.js",
+    "dev": "npx concurrently --kill-others \"npm run watch\" \"npm start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "socket.io": "^4.8.1"
+  }
+}
